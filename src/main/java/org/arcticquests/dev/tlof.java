@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.arcticquests.dev.block.ModBlocks;
 import org.arcticquests.dev.item.ModItems;
 import org.slf4j.Logger;
 
@@ -27,6 +28,7 @@ public class tlof {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public tlof() {
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
@@ -42,6 +44,7 @@ public class tlof {
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -50,9 +53,7 @@ public class tlof {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.GUM);
-        }
+
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

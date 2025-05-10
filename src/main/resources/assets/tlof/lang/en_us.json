@@ -1,3 +1,5 @@
 {
-  "item.tlof.gum" : "Gum"
+  "item.tlof.sap" : "Sap",
+  "item.tlof.sapextractor": "Sap Extractor",
+  "creativetab.tlof.sap_items": "Sap Items"
 }
